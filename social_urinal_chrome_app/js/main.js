@@ -9,4 +9,7 @@ function log(msg){
 }
 pubsub.on('log', log);
 
-var ser = new SerialConnection();
+var serialConnection = new SerialConnection();
+var faceRecognitionConnector = new FaceRecognitionConnector();
+var serverConnector = new ServerConnector();
+var appView = new AppView();
