@@ -3,5 +3,7 @@ function ServerConnector(){
 };
 
 _.extend(ServerConnector.prototype, Proxyable, {
-
-}
+	init : function(){
+		
+	}
+});
