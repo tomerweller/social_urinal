@@ -11,10 +11,6 @@ void setup() {
 void loop() {
   state = Serial.read();
   weight++;
-  if (false){
-    Serial.write(state);   
-  } else {
-    Serial.write(weight); 
-  }
+  Serial.write(weight); 
   delay(100);
 }
