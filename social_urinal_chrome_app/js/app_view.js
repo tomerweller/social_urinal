@@ -9,8 +9,7 @@ _.extend(AppView.prototype, Proxyable, {
   },
 
   log : function(msg){
-  	var buffer = document.querySelector('#buffer');
-  	console.log(msg);
-  	buffer.innerHTML += msg + '<br/>';
+  	$("#buffer").append(msg + '<br/>');
   }
+
 });
