@@ -1,10 +1,13 @@
-
+var token = null;
+var name;= null
+var avatarUrl= null;
+var friends= null;
 $.get("http://whispering-cove-9010.herokuapp.com/info", function(data){
 console.log("Data Loaded: " + data);
-var token = data.me.access_token;
-var name = data.me.display_name;
-var avatarUrl = data.me.avatar_url;
-var friends = data.friends;
+ token = data.me.access_token;
+ name = data.me.display_name;
+ avatarUrl = data.me.avatar_url;
+ friends = data.friends;
 //postit();
 });
 
