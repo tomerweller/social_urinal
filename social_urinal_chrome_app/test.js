@@ -1,5 +1,15 @@
-
-
+var token = null;
+var name= null
+var avatarUrl= null;
+var friends= null;
+$.get("http://whispering-cove-9010.herokuapp.com/info", function(data){
+console.log("Data Loaded: " + data);
+ token = data.me.access_token;
+ name = data.me.display_name;
+ avatarUrl = data.me.avatar_url;
+ friends = data.friends;
+//postit();
+});
 // requestAnimationFrame shim
 (function() {
 	var i = 0,
@@ -104,7 +114,7 @@ var App = {
 			if(noFaceDetect==25){
 			console.log("gone");
 			if(faceDetect>25)
-				$.post("http://whispering-cove-9010.herokuapp.com/urinate", { access_token: "token", quantity: "100", displayImage : imgtemp } );
+				$.post("http://whispering-cove-9010.herokuapp.com/urinate", { access_token: token, quantity: "100", displayImage : imgtemp } );
 			faceDetect=0;	
 		}
 	}
