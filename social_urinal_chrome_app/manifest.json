@@ -13,5 +13,5 @@
       "transient": true
     }
   },
-  "permissions": ["serial"]
+  "permissions": ["serial","audioCapture","videoCapture","http://*/"]
 }

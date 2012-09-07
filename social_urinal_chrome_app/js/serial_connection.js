@@ -15,6 +15,7 @@ _.extend(SerialConnection.prototype, Proxyable, {
   init : function(){
     serial.getPorts(this.proxy(function(ports){
       _.each(ports, this.proxy(function(port, i){
+		pubsub.trigger("log", "avail port : " + port);
         if (port.indexOf(GOOD_PORT_PREFIX) == 0)
           this.selectedPort = port; 
       }));
