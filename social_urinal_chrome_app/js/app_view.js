@@ -7,6 +7,7 @@ _.extend(AppView.prototype, Proxyable, {
   init : function(){
   	pubsub.on('log', this.proxy(this.log));
   	pubsub.on('startSession', this.proxy(this.startSession));
+    pubsub.on('gotSessionData', this.proxy(this.gotSessionData));
   	pubsub.on('endSession', this.proxy(this.endSession));
   },
 
@@ -16,11 +17,17 @@ _.extend(AppView.prototype, Proxyable, {
   },
 
   startSession : function(){
-  	//Eldad: code to start session
+  	//Eldad: face is in front of camera. requesting info from server
+  },
+
+  gotSessionData : function(data){
+    console.log(data);
+    //Eldad, got session data
   },
 
   endSession : function(){
-  	//Eldad: code to end session
+  	//Eldad, end session
   }
+
 
 });
